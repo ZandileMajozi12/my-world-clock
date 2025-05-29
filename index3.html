@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Clock</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Moment.js and Moment Timezone -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.43/moment-timezone-with-data.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>World Clock</h1>
+
+        <div class="time-box">
+            <h2>Your Location: <span id="user-location">Loading...</span></h2>
+            <p id="user-time">Loading time...</p>
+            <p id="user-timezone"></p>
+        </div>
+
+        <div class="select-box">
+            <label for="city-select">Select a City:</label>
+            <select id="city-select">
+                <option value="">--Choose--</option>
+                <option value="America/New_York">New York</option>
+                <option value="Europe/London">London</option>
+                <option value="Asia/Tokyo">Tokyo</option>
+            </select>
+        </div>
+
+        <div class="time-box" id="selected-city-box" style="display: none;">
+            <h2>Selected City Time: <span id="selected-city-name"></span></h2>
+            <p id="selected-city-time"></p>
+            <p id="selected-city-timezone"></p>
+            <a href="#" id="home-link">Back to Homepage</a>
+        </div>
+
+        <div class="time-box">
+            <h2>World Clocks</h2>
+            <p>New York: <span id="ny-time"></span></p>
+            <p>London: <span id="london-time"></span></p>
+            <p>Tokyo: <span id="tokyo-time"></span></p>
+        </div>
+    </div>
+
+    <footer>This page was coded by Zandile Majozi using <a
+            href="https://github.com/ZandileMajozi12/my-world-clock">Github</a> and is displayed on <a
+            href="">Netlify</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
